@@ -1,0 +1,10 @@
+version: '3'
+services:
+  reddit-bot:
+    build: .
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: python python_reddit_bot.py
+    restart: always  # Add this line
