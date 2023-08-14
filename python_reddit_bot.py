@@ -4,11 +4,11 @@ import os
 
 # Configure PRAW with your Reddit application's new credentials
 reddit = praw.Reddit(
-    client_id="jJE9XhQOg6LvXOyh95FOmA",
-    client_secret="ly6xOm8HX3flEMiayGGqJcL-4Ib-GA",
-    username="brokencontroller9645",
-    password="hungrygamer435!",
-    user_agent="PythonLover Bot:v1.0 (by /u/PythonLover)"
+    client_id=os.environ.get("REDDIT_CLIENT_ID"),
+    client_secret=os.environ.get("REDDIT_CLIENT_SECRET"),
+    username=os.environ.get("REDDIT_USERNAME"),
+    password=os.environ.get("REDDIT_PASSWORD"),
+    user_agent=os.environ.get("REDDIT_USER_AGENT")
 )
 
 # Check for Existing Replied Posts
